@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="UserMap">
+    <resultMap id="usermap" type="com.fankk.model.UserPO">
+        <result property="name" column="NAME" javaType="java.lang.String"/>
+        <result property="password" column="PASSWORLD" javaType="java.lang.String"/>
+        <result property="role" column="ROLE" javaType="java.lang.String"/>
+        <result property="permissions" column="PERMISSIONS" javaType="java.lang.String"/>
+    </resultMap>
+
+    <select id="checkByName" parameterType="String" resultMap="usermap">
+		select *
+		from users where 1=1
+	</select>
+	
+</mapper>
